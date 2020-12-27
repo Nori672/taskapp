@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RiV-kA-WcE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="ZJM-Ys-QAg" detailTextLabel="pv4-sx-hKl" style="IBUITableViewCellStyleSubtitle" id="Poh-JR-rcb">
@@ -45,17 +45,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xBP-ii-ViA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="RiV-kA-WcE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4lx-b6-ZEF"/>
-                            <constraint firstItem="RiV-kA-WcE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CDX-Nd-Zfh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RiV-kA-WcE" secondAttribute="trailing" id="FM9-VN-Ifn"/>
+                            <constraint firstItem="xBP-ii-ViA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L0b-7I-aGa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RiV-kA-WcE" secondAttribute="bottom" id="Ow4-al-xNl"/>
+                            <constraint firstItem="RiV-kA-WcE" firstAttribute="top" secondItem="xBP-ii-ViA" secondAttribute="bottom" id="gek-2w-DC4"/>
+                            <constraint firstItem="xBP-ii-ViA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gmE-Kz-hJT"/>
+                            <constraint firstItem="xBP-ii-ViA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rCe-aZ-xtk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="E5m-f3-fwk">
+                        <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Uw6-uf-yvW">
                             <connections>
                                 <segue destination="71E-Xl-Jtr" kind="show" id="Rv1-CC-hlZ"/>
@@ -63,6 +71,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Filtering" destination="xBP-ii-ViA" id="N6K-So-qj1"/>
                         <outlet property="tableView" destination="RiV-kA-WcE" id="Dak-R8-Cuk"/>
                         <segue destination="71E-Xl-Jtr" kind="show" identifier="cellSegue" id="EyP-bp-Bod"/>
                     </connections>
@@ -116,6 +125,14 @@
                                     <constraint firstAttribute="height" constant="120" id="4IN-1R-c9t"/>
                                 </constraints>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="カテゴリー設定" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJg-eG-OC1">
+                                <rect key="frame" x="10" y="570" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ODA-bq-IBa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -133,12 +150,16 @@
                             <constraint firstItem="C9X-dZ-2A5" firstAttribute="leading" secondItem="mbX-hh-K6K" secondAttribute="leading" id="fIO-Q1-wCQ"/>
                             <constraint firstItem="3Ud-gU-yNy" firstAttribute="leading" secondItem="mbX-hh-K6K" secondAttribute="leading" constant="10" id="hb7-Ki-EaE"/>
                             <constraint firstItem="gwp-tT-0jm" firstAttribute="leading" secondItem="mbX-hh-K6K" secondAttribute="leading" constant="10" id="nB3-cq-aWm"/>
+                            <constraint firstItem="LJg-eG-OC1" firstAttribute="leading" secondItem="mbX-hh-K6K" secondAttribute="leading" constant="10" id="qrv-qD-Jzz"/>
+                            <constraint firstItem="LJg-eG-OC1" firstAttribute="top" secondItem="C9X-dZ-2A5" secondAttribute="bottom" constant="30" id="sli-YY-j48"/>
                             <constraint firstItem="mbX-hh-K6K" firstAttribute="trailing" secondItem="lBc-cO-mRk" secondAttribute="trailing" constant="10" id="veq-Af-RjE"/>
+                            <constraint firstItem="mbX-hh-K6K" firstAttribute="trailing" secondItem="LJg-eG-OC1" secondAttribute="trailing" constant="10" id="wAn-dW-SYN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mbX-hh-K6K"/>
                     </view>
                     <navigationItem key="navigationItem" id="9N0-bF-HEO"/>
                     <connections>
+                        <outlet property="category" destination="LJg-eG-OC1" id="1l6-KC-78C"/>
                         <outlet property="contentsTextView" destination="3Ud-gU-yNy" id="jNX-sQ-vA2"/>
                         <outlet property="datePicker" destination="C9X-dZ-2A5" id="eSa-6J-Twh"/>
                         <outlet property="titleTextField" destination="KQF-Tz-iK0" id="cbi-wd-UYV"/>

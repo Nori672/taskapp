@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		FA08037F2580F12C00F8F885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA08037E2580F12C00F8F885 /* Assets.xcassets */; };
 		FA0803822580F12C00F8F885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0803802580F12C00F8F885 /* LaunchScreen.storyboard */; };
 		FA08038A2580FC8500F8F885 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0803892580FC8500F8F885 /* InputViewController.swift */; };
+		FA4BF62F258A2B81006673AE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4BF62E258A2B81006673AE /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FA0803812580F12C00F8F885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0803832580F12C00F8F885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0803892580FC8500F8F885 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		FA4BF62E258A2B81006673AE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				A502FEC0326F23B5E120929C /* Pods-taskapp.debug.xcconfig */,
 				E00B570D6DA876085A6B9DBC /* Pods-taskapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +92,7 @@
 				FA08037E2580F12C00F8F885 /* Assets.xcassets */,
 				FA0803802580F12C00F8F885 /* LaunchScreen.storyboard */,
 				FA0803832580F12C00F8F885 /* Info.plist */,
+				FA4BF62E258A2B81006673AE /* Task.swift */,
 			);
 			path = taskapp;
 			sourceTree = "<group>";
@@ -212,6 +214,7 @@
 			files = (
 				FA08037A2580F12A00F8F885 /* ViewController.swift in Sources */,
 				FA0803762580F12A00F8F885 /* AppDelegate.swift in Sources */,
+				FA4BF62F258A2B81006673AE /* Task.swift in Sources */,
 				FA0803782580F12A00F8F885 /* SceneDelegate.swift in Sources */,
 				FA08038A2580FC8500F8F885 /* InputViewController.swift in Sources */,
 			);
